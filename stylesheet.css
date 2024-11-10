@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3, h4 {
+    color: #333;
+  }
+  
+  h2 {
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #008CBA;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  h2:hover::after {
+    width: 100%;
+  }
+  
+
+
+  header h1, header h3 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1px; /* Space below text for the underline */
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  header h1::after, header h3::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start underline at the center */
+    bottom: 0;
+    transform: translateX(-50%); /* Center the underline */
+    width: 0;
+    height: 2px;
+    background-color: #008CBA; /* Line color */
+    transition: width 0.4s ease-in-out;
+  }
+  
+  header h1:hover::after, header h3:hover::after {
+    width: 100%; /* Grow the underline from the center outwards */
+  }
+  
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #008CBA;
+    border-radius: 10px;
+  }
+  
+  header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  section {
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .personal-info p {
+    margin: 5px 0;
+  }
+  
+  .education ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .education li {
+    padding: 5px 0;
+  }
+  
+  .work-experience ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .work-experience li {
+    padding: 5px 0;
+  }
+  
+  .skills ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skills li {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .toggle-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .toggle-button:hover {
+    background-color: #555;
+  }
+
+  .socialmedia-icons a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .socialmedia-icons a:hover {
+    color: #008CBA;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .socialmedia-icons i {
+    margin-right: 10px;
+  }
+  
+
+  /* Responsive - max-width: 768px */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    header img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  /* Responsive - max-width: 400px */
+  @media (max-width: 400px) {
+    .container {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    header img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    h1 {
+      font-size: 18px;
+    }
+  
+    h3 {
+      font-size: 14px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    section {
+      padding: 15px;
+    }
+  
+    .skills li {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    button#toggleskills {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  
+    footer {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+  
+    .socialmedia-icons a {
+      font-size: 18px;
+    }
+  }
+  /* Hide sections by default if needed */
+#personal-info,
+#education,
+#work-experience,
+#skills {
+  display: block; /* Initially visible */
+}
+
+  
